@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weil ich ein Mädchen bin - Puzzle – Gemälde</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 25px;
+      line-height: 1.6;
+      background: #f5f5f5;
+      color: #222;
+    }
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    h1 {
+      margin-bottom: 5px;
+    }
+    .details {
+      color: #555;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+
+    <img src="IMG_20261015_165103.jpg" alt="Gemälde Weil ich ein Mädchen bin - Puzzle">
+
+    <h1>Weil ich ein Mädchen bin - Puzzle</h1>
+
+    <p class="details">
+      Öl auf Leinwand · 100 × 100 × 4,5 cm · 2026
+    </p>
+
+    <p><strong>Preis: € 4.100</strong></p>
+
+    <h2>Bildbeschreibung</h2>
+
+<div id="deutsch">
+  <p>"Weil ich ein Mädchen bin"ist kein Statement über Identität,- es ist eine Einladung,sie zu denken,zu fühlen,zu verschieben. 
+  Zwischen Blüten und Rasierschaum, Ironie und Intimität eröffnet sich ein zarter,aber kraftvoller Dialog über Geschlecht, Selbstbild und gesellschaftlicher Erwartung.Kunstals Spiegel ,Puzzle und Spiel zugleich - ein Prozess der nicht endet,solange jemand hinsieht.</p>
+</div>
+    
+<div id="englisch">
+  <p>*Because I Am a Girl* is not a statement about identity—it is an invitation to think about it, to feel it, and to reshape it.
+
+Between blossoms and shaving foam, irony and intimacy, a delicate yet powerful dialogue unfolds around gender, self-image, and social expectations.
+
+Art becomes a mirror, a puzzle, and a game all at once—a process that never ends as long as someone is looking.</p>
+</div>
+
+<div>
+  <button onclick="vorlesenDeutsch()">🇩🇪 Deutsch vorlesen</button>
+  <button onclick="vorlesenEnglisch()">🇬🇧 English vorlesen</button>
+</div>
+
+<script>
+function vorlesenDeutsch() {
+  const text = document.getElementById("deutsch").innerText;
+  const sprache = new SpeechSynthesisUtterance(text);
+  sprache.lang = "de-DE";
+  speechSynthesis.cancel();
+  speechSynthesis.speak(sprache);
+}
+
+function vorlesenEnglisch() {
+  const text = document.getElementById("englisch").innerText;
+  const sprache = new SpeechSynthesisUtterance(text);
+  sprache.lang = "en-GB";
+  speechSynthesis.cancel();
+  speechSynthesis.speak(sprache);
+}
+</script>
+    
+<button onclick="vorlesen()">🔊 Beschreibung vorlesen</button>
+
+<script>
+
+  </div>
+</body>
+</html>
